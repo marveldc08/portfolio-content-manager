@@ -1,38 +1,160 @@
 .App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+  width: 100%;
+  padding: 0;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.App-header, .main {
+  background-color: white;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #282c34;
+  width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.main{
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+
+}
+.sectionWrap{
+  margin-top: 6px;
+  width: 50%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.App-group{
+    display: grid;
+    margin: 10px 0;
+    /* justify-content: space-between; */
+    align-items: center;
+} 
+
+.App-Button{
+     height: 3em;
+     font-weight: 700;
+     font-size: 1em;
+     background-color: var(--main-color) !important;
+     color: var(--text-color);
+     border-radius: 10px;
+     margin: 1em 0;
+     margin-top: 15px !important;
+}
+.addBtnWrap{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.addBtn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+      height: 30px;
+      width: 30px;
+      padding: 12px;
+     font-weight: 700;
+     font-size: 1em;
+     background-color: var(--main-color);
+     color: var(--text-color);
+     border-radius: 50%;
+     margin: 1em 0;
+     text-align: center;
+     /* padding: 0; */
+}
+.addBtn p{
+  margin-top: 1pc;
+}
+.formPage{
+  background-color: #282c34 ;
+}
+
+.smallText{
+  font-size: 14px;
+}
+.buttonWrap{
+  margin: 7px 0;
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.smDiscrip{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 12px;
+    padding: 0 0 6px;
+    margin: 0;
+}
+.imgInput{
+  border: 1px solid #bbbbbc;
+  padding: 14px;
+  /* width: 100%; */
+  border-radius: 4px;
+}
+.imgInput:hover{
+  border: 1px solid #313131;
+}
+.imgInput:focus{
+  outline: none;
+}
+.sliderWrap{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  border: 1px solid #bbbbbc;
+  border-radius: 4px;
+  padding: 14px;
+}
+.sliderWrap:hover{
+    border: 1px solid #313131;
+}
+.sliderWrap p{
+  margin-right: 10px;
+  width: 30%;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgb(102, 102, 102);
+  text-align: left;
+}
+.numberInput{
+   border-top: 0;
+   border-left: 0;
+   border-right: 0;
+   border-bottom:1px solid #f9004d;
+  border-radius: 4px;
+  width: 50px;
+  text-align: center;
+}
+.numberInput:focus{
+  outline: none;
+  
+}
+
+@media (max-width: 768px) {
+  .App-group{
+    width: 100%;
+    padding: 1rem;
   }
-  to {
-    transform: rotate(360deg);
+  .App-header h2{
+    font-size: 18px;
+  }
+  .sectionWrap{
+    width: 100%;
+  }
+  .numberInput{
+    width: 30px;
   }
 }
